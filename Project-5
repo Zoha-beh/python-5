@@ -1,0 +1,18 @@
+def woerter_zaehlen(text):
+    woerter = text.split()
+    return len(woerter)
+
+def main():
+    print("Willkommen zum Wörter-Zähler!")
+    while True:
+        text = input("Gib deinen Text ein: ")
+        anzahl_woerter = woerter_zaehlen(text)
+        print(f"Der eingegebene Text enthält {anzahl_woerter} Wörter.")
+
+        nochmal = input("Möchtest du einen weiteren Text eingeben? (ja/nein): ").strip().lower()
+        if nochmal != 'ja':
+            print("Danke fürs Benutzen des Wörter-Zählers! Auf Wiedersehen.")
+            break
+
+if __name__ == "__main__":
+    main()
